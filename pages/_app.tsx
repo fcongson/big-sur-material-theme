@@ -3,7 +3,7 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import React from "react";
-import theme from "../src/theme";
+import theme from "../src/styles/theme";
 
 export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props;

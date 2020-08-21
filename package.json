@@ -1,19 +1,19 @@
 {
-  "name": "nextjs-with-typescript",
+  "name": "big-sur-material-theme",
   "version": "4.0.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "latest",
     "clsx": "latest",
     "next": "latest",
+    "next-images": "latest",
     "react": "latest",
     "react-dom": "latest"
   },
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
-    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+    "start": "next start"
   },
   "devDependencies": {
     "@types/next": "latest",
