@@ -1,3 +1,4 @@
+import { FormControlLabel, Switch, useTheme } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
@@ -37,7 +38,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Index() {
+  const theme = useTheme();
   const classes = useStyles();
+
+  const toggleDarkMode = () => {
+    const type = theme.palette.type;
+    theme.palette.type = type === "light" ? "dark" : "light";
+  };
+
   return (
     <div className={classes.root}>
       <AppBar position="relative" color="secondary">
@@ -45,6 +53,7 @@ export default function Index() {
           <Grid
             container
             direction="row"
+            justify="space-between"
             alignItems="center"
             className={classes.header}
           >
@@ -59,10 +68,22 @@ export default function Index() {
           <Grid
             container
             direction="row"
+            justify="space-between"
             alignItems="center"
             className={classes.header}
           >
             <Typography variant="h6">macOS Big Sur</Typography>
+            <FormControlLabel
+              control={
+                <Switch
+                  checked={theme.palette.type === "dark"}
+                  onChange={toggleDarkMode}
+                  name="darkMode"
+                  color="primary"
+                />
+              }
+              label="Dark Mode"
+            />
           </Grid>
         </Container>
       </AppBar>
