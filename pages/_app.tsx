@@ -1,9 +1,8 @@
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { ThemeProvider } from "@material-ui/core/styles";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import React from "react";
-import theme from "../src/styles/theme";
+import { ThemeContextProvider } from "../src/utils/useThemeContext";
 
 export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props;
@@ -19,17 +18,17 @@ export default function MyApp(props: AppProps) {
   return (
     <React.Fragment>
       <Head>
-        <title>My page</title>
+        <title>Big Sur Material Theme</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </Head>
-      <ThemeProvider theme={theme}>
+      <ThemeContextProvider>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <Component {...pageProps} />
-      </ThemeProvider>
+      </ThemeContextProvider>
     </React.Fragment>
   );
 }

@@ -1,9 +1,10 @@
-import { FormControlLabel, Switch, useTheme } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
 import Container from "@material-ui/core/Container";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import makeStyles from "@material-ui/core/styles/makeStyles";
+import Switch from "@material-ui/core/Switch";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
 import backgroundImageDark from "../images/macOS-Big-Sur-Vector-Wave-Dark.jpg";
@@ -11,6 +12,7 @@ import backgroundImage from "../images/macOS-Big-Sur-Vector-Wave.jpg";
 import Copyright from "../src/components/Copyright";
 import Link from "../src/components/Link";
 import ProTip from "../src/components/ProTip";
+import { useThemeContext } from "../src/utils/useThemeContext";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,13 +40,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Index() {
-  const theme = useTheme();
   const classes = useStyles();
-
-  const toggleDarkMode = () => {
-    const type = theme.palette.type;
-    theme.palette.type = type === "light" ? "dark" : "light";
-  };
+  const { theme, toggleTheme } = useThemeContext();
 
   return (
     <div className={classes.root}>
@@ -77,7 +74,7 @@ export default function Index() {
               control={
                 <Switch
                   checked={theme.palette.type === "dark"}
-                  onChange={toggleDarkMode}
+                  onChange={toggleTheme}
                   name="darkMode"
                   color="primary"
                 />
