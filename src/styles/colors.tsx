@@ -85,9 +85,14 @@ const colors = {
   translucentWhite: {
     main: "rgba(255, 255, 255, 0.72)",
   },
-  translucentBlack: {
-    main: "rgba(0,0,0,0.8)",
-  },
+  translucentBlack: [
+    {
+      main: "rgba(0,0,0,0.8)",
+    },
+    {
+      main: "rgba(29,29,31,0.72)",
+    },
+  ],
 };
 
 export default colors;

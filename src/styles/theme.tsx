@@ -29,15 +29,15 @@ const theme = createMuiTheme({
         height: 66,
       },
       colorDefault: {
-        backgroundColor: colors.translucentWhite.main,
-        color: common.black,
+        backgroundColor: colors.translucentBlack[1].main,
+        color: common.white,
       },
       colorPrimary: {
         backgroundColor: colors.translucentWhite.main,
         color: common.black,
       },
       colorSecondary: {
-        backgroundColor: colors.translucentBlack.main,
+        backgroundColor: colors.translucentBlack[0].main,
         color: common.white,
       },
     },

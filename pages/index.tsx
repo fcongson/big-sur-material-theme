@@ -40,6 +40,21 @@ const useStyles = makeStyles((theme) => ({
   content: {
     padding: "4rem",
   },
+  hero: {
+    minHeight: 0,
+  },
+  typographyHeroIntro: {
+    color: theme.palette.common.white,
+    fontSize: "3.75rem",
+    fontWeight: 500,
+    lineHeight: 1,
+  },
+  typographyHeroHeadline: {
+    color: theme.palette.common.white,
+    fontSize: "15rem",
+    fontWeight: 500,
+    lineHeight: 1,
+  },
 }));
 
 export default function Index() {
@@ -54,7 +69,7 @@ export default function Index() {
         elevation={0}
         className={classes.secondaryAppBar}
       >
-        <Container maxWidth="lg" className={classes.header}>
+        <Container maxWidth="md" className={classes.header}>
           <Grid
             container
             direction="row"
@@ -68,8 +83,8 @@ export default function Index() {
           </Grid>
         </Container>
       </AppBar>
-      <AppBar position="sticky" color="primary" elevation={0}>
-        <Container maxWidth="lg" className={classes.header}>
+      <AppBar position="sticky" color="default" elevation={0}>
+        <Container maxWidth="md" className={classes.header}>
           <Grid
             container
             direction="row"
@@ -92,7 +107,29 @@ export default function Index() {
           </Grid>
         </Container>
       </AppBar>
-      <Container maxWidth="sm" className={classes.main}>
+      <Container maxWidth="md" className={classes.main}>
+        <Grid
+          container
+          justify="center"
+          alignItems="center"
+          direction="column"
+          className={`${classes.container} ${classes.hero}`}
+        >
+          <Typography
+            variant="body1"
+            component="p"
+            className={classes.typographyHeroIntro}
+          >
+            macOS
+          </Typography>
+          <Typography
+            variant="h1"
+            component="h1"
+            className={classes.typographyHeroHeadline}
+          >
+            Big Sur
+          </Typography>
+        </Grid>
         <Grid
           container
           justify="center"

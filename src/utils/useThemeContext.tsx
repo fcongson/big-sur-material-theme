@@ -18,16 +18,23 @@ const ThemeContext = React.createContext({
 
 export const ThemeContextProvider: React.FunctionComponent = ({ children }) => {
   const [theme, setTheme] = React.useState(lightTheme);
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const toggleTheme = () => {
     setTheme(() => (theme.palette.type === "light" ? darkTheme : lightTheme));
   };
 
-  return (
+  const body = (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </ThemeContext.Provider>
   );
+
+  return !mounted ? <div style={{ visibility: "hidden" }}>{body}</div> : body;
 };
 
 export const useThemeContext = () => React.useContext(ThemeContext);
