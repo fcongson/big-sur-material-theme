@@ -76,6 +76,18 @@ const colors = {
       dark: "#1C1C1E",
     },
   ],
+  black: {
+    main: "#292929",
+  },
+  white: {
+    main: "#FFFFFF",
+  },
+  translucentWhite: {
+    main: "rgba(255, 255, 255, 0.72)",
+  },
+  translucentBlack: {
+    main: "rgba(0,0,0,0.8)",
+  },
 };
 
 export default colors;

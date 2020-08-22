@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     minHeight: "400vh",
   },
+  secondaryAppBar: {
+    height: "44px",
+  },
   header: {
     height: "100%",
   },
@@ -45,7 +48,12 @@ export default function Index() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="relative" color="secondary">
+      <AppBar
+        position="relative"
+        color="secondary"
+        elevation={0}
+        className={classes.secondaryAppBar}
+      >
         <Container maxWidth="lg" className={classes.header}>
           <Grid
             container
@@ -60,7 +68,7 @@ export default function Index() {
           </Grid>
         </Container>
       </AppBar>
-      <AppBar position="sticky" color="primary">
+      <AppBar position="sticky" color="primary" elevation={0}>
         <Container maxWidth="lg" className={classes.header}>
           <Grid
             container
