@@ -11,7 +11,7 @@ const Hero = () => {
       justify="center"
       alignItems="center"
       direction="column"
-      className={`${classes.container} ${classes.hero}`}
+      className={classes.hero}
     >
       <Typography
         variant="body1"

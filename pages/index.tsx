@@ -10,8 +10,8 @@ const Index = () => {
   return (
     <div className={classes.root}>
       <Header />
+      <Hero />
       <Container maxWidth="md" className={classes.main}>
-        <Hero />
         <Grids />
       </Container>
     </div>

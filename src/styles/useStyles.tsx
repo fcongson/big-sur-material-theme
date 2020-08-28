@@ -29,7 +29,7 @@ export const useStyles = makeStyles((theme) => ({
     padding: "4rem",
   },
   hero: {
-    minHeight: 0,
+    minHeight: "100vh",
   },
   typographyHeroIntro: {
     color: theme.palette.common.white,
