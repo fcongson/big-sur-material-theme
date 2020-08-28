@@ -13,17 +13,14 @@ const Hero = () => {
       direction="column"
       className={classes.hero}
     >
-      <Typography
-        variant="body1"
-        component="p"
-        className={classes.typographyHeroIntro}
-      >
+      <Typography variant="body1" component="p" className={classes.heroIntro}>
         macOS
       </Typography>
       <Typography
         variant="h1"
         component="h1"
-        className={classes.typographyHeroHeadline}
+        className={classes.heroHeadline}
+        gutterBottom
       >
         Big Sur
       </Typography>

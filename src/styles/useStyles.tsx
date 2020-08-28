@@ -31,13 +31,13 @@ export const useStyles = makeStyles((theme) => ({
   hero: {
     minHeight: "100vh",
   },
-  typographyHeroIntro: {
+  heroIntro: {
     color: theme.palette.common.white,
     fontSize: "3.75rem",
     fontWeight: 500,
     lineHeight: 1,
   },
-  typographyHeroHeadline: {
+  heroHeadline: {
     color: theme.palette.common.white,
     fontSize: "15rem",
     fontWeight: 500,
