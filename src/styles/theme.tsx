@@ -47,6 +47,7 @@ const theme = createMuiTheme({
         backdropFilter: "saturate(1.8) blur(20px)",
         WebkitBackdropFilter: "saturate(1.8) blur(20px)",
         backgroundColor: colors.translucentWhite.main,
+        padding: 16,
       },
     },
   },

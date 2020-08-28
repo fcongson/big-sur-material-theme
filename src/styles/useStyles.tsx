@@ -43,4 +43,16 @@ export const useStyles = makeStyles((theme) => ({
     fontWeight: 500,
     lineHeight: 1,
   },
+  widgetSmall: {
+    width: 155,
+    height: 155,
+  },
+  widgetMedium: {
+    width: 329,
+    height: 155,
+  },
+  widgetLarge: {
+    width: 329,
+    height: 345,
+  },
 }));
