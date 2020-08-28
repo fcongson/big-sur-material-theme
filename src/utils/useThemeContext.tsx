@@ -11,7 +11,7 @@ const ThemeContext = React.createContext({
 
 export const ThemeContextProvider: React.FunctionComponent = ({ children }) => {
   const { value, toggle: toggleTheme } = useDarkMode(false, {
-    onChange: () => setTheme(() => (value ? lightTheme : darkTheme)),
+    onChange: () => setTheme(() => (value ? darkTheme : lightTheme)),
   });
   const [theme, setTheme] = React.useState(value ? darkTheme : lightTheme);
   const [mounted, setMounted] = React.useState(false);

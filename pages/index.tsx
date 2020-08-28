@@ -18,7 +18,6 @@ export const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     minHeight: "400vh",
   },
-
   main: {
     padding: "4rem",
   },
