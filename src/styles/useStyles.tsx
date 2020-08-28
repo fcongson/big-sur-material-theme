@@ -1,4 +1,4 @@
-import makeStyles from "@material-ui/core/styles/makeStyles";
+import { makeStyles } from "@material-ui/core/styles";
 import backgroundImageDark from "../../images/macOS-Big-Sur-Vector-Wave-Dark.jpg";
 import backgroundImage from "../../images/macOS-Big-Sur-Vector-Wave.jpg";
 
@@ -15,6 +15,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   secondaryAppBar: {
     height: "44px",
+    padding: "0px",
   },
   header: {
     height: "100%",
