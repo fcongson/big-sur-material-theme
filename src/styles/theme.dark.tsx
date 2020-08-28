@@ -6,7 +6,7 @@ import typography from "./typography";
 // Create a theme instance.
 const theme = createMuiTheme({
   palette: {
-    type: "light",
+    type: "dark",
     common: {
       black: colors.black.main,
       white: colors.white.main,
@@ -15,7 +15,7 @@ const theme = createMuiTheme({
     secondary: colors.gray[0],
     error: colors.red,
     background: {
-      default: common.white,
+      default: common.black,
     },
   },
   typography: {
@@ -46,7 +46,7 @@ const theme = createMuiTheme({
       root: {
         backdropFilter: "saturate(1.8) blur(20px)",
         WebkitBackdropFilter: "saturate(1.8) blur(20px)",
-        backgroundColor: colors.translucentWhite.main,
+        backgroundColor: colors.translucentBlack[1].main,
       },
     },
   },

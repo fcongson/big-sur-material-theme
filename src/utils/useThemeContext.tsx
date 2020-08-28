@@ -1,15 +1,7 @@
 import { ThemeProvider } from "@material-ui/core/styles";
 import React from "react";
-import theme from "../styles/theme";
-
-const lightTheme = {
-  ...theme,
-  palette: { ...theme.palette, type: "light" },
-};
-const darkTheme = {
-  ...theme,
-  palette: { ...theme.palette, type: "dark" },
-};
+import lightTheme from "../styles/theme";
+import darkTheme from "../styles/theme.dark";
 
 const ThemeContext = React.createContext({
   theme: lightTheme,
