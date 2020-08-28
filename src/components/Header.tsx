@@ -40,6 +40,7 @@ const Header = () => {
                 />
               }
               label="Dark Mode"
+              labelPlacement="start"
             />
           </Grid>
         </Container>
