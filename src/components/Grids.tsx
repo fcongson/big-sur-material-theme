@@ -1,7 +1,22 @@
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
+import makeStyles from "@material-ui/core/styles/makeStyles";
 import React from "react";
-import { useStyles } from "../styles/useStyles";
+
+export const useStyles = makeStyles(() => ({
+  widgetSmall: {
+    width: 155,
+    height: 155,
+  },
+  widgetMedium: {
+    width: 329,
+    height: 155,
+  },
+  widgetLarge: {
+    width: 329,
+    height: 345,
+  },
+}));
 
 const Grids = () => {
   const classes = useStyles();
